@@ -14,6 +14,7 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 <script type="text/javascript">
    (function(){
       emailjs.init("K186n3klexni0hH1l");
@@ -70,13 +71,13 @@
       </nav>
       <header class="header">
         <div class="header__content">
-          <h1 class="title">Hey</h1>
-          <h1 class="title orange">I'm Jang.</h1>
+          <div class="fractal_tree" id="fractal-tree"></div>
+
+          <h1 class="title"><span class="typing"></span><span class="cursor">|</span></h1>
+          <h2 class="title sub">I create stuff when im bored.</h2>
           <p class="header__para">
-            I'm a <b class="orange">Frontend Sotware Engineer</b> with a strong
-            passion for building web applications with great user experiences.
-            <br />
-            Here's a bit more <b class="orange click" onclick="toggleModal()"> about me.</b>
+            I'm a software engineer based in Sacramento. I have great interest in full-stack development, artificial intelligence, human-computer interactions, and everything in between.
+            <!-- Here's a bit more <b class="orange click" onclick="toggleModal()"> about me.</b> -->
           </p>
           <div class="social__list">
             <a href="htps://www.linkedin.com/in/jang-singh" target="_blank" class="social__link click ">
@@ -101,6 +102,7 @@
         </a>
 
         <div class="modal">
+          
             <div class="modal__half modal__about">
                 <h3 class="modal__title model__title--about">Here's more about me</h3>
                 <h4 class="modal__sub-title model__sub-title--about">Frontend software developer</h4>
@@ -129,6 +131,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+              
                 <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
 
                 <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
@@ -158,7 +161,7 @@
                 </div>
             </div>
         </div>
-<img src="./assets/semi circle.svg" class="shape shape--0">
+<!-- <img src="./assets/semi circle.svg" class="shape shape--0">
 <img src="./assets/circle.svg" class="shape shape--1">
 <img src="./assets/squiggly.svg" class="shape shape--2">
 <img src="./assets/circle.svg" class="shape shape--3">
@@ -166,7 +169,7 @@
 <img src="./assets/circle.svg" class="shape shape--5">
 <img src="./assets/squiggly.svg" class="shape shape--6">
 <img src="./assets/circle.svg" class="shape shape--7">
-<img src="./assets/semi circle.svg" class="shape shape--8">
+<img src="./assets/semi circle.svg" class="shape shape--8"> -->
 
       </section>
       <section id="projects">
@@ -178,7 +181,7 @@
             <ul class="project__list">
               <li class="project">
                 <div class="project__wrapper">
-                  <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                  <img src="./assets/car-travel-project.png" class="project__img" alt="">
                   <div class="project__wrapper--bg"></div>
                   <div class="project__description">
                     <h3 class="project__description--title">
@@ -191,7 +194,7 @@
                       User's are allowed to make accounts on the website and search for dream vaction spots. Leave reviews on businesses and also book flights!
                     </p>
                     <div class="project__description--links">
-                      <a href="#" class="project__description--link">
+                      <a href="https://github.com/Jsingh651/Zync.git" class="project__description--link">
                         <i class="fab fa-github"></i>
                       </a>
                       <a href="#" class="project__description--link">
@@ -201,7 +204,7 @@
                   </div>
                 </div>
               </li>
-              <li class="project">
+              <!-- <li class="project">
                 <div class="project__wrapper">
                   <img src="./assets/blinker mockup.png" class="project__img" alt="">
                   <div class="project__wrapper--bg"></div>
@@ -254,7 +257,7 @@
                     </div>
                   </div>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>

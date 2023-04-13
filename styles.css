@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
 
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Roboto', sans-serif;
+font-family: "NTR", sans-serif;
 }
 
 html{
@@ -88,11 +90,19 @@ input:focus, textarea:focus{
 }
 
 .title{
-    font-size: 68px;
-    margin-bottom: 12px;
+    font-size: 86px;
+    padding-bottom: 5px;
     text-align: left;
     line-height: 1;
     z-index: 100;
+}
+.sub{
+    font-size: 46px;
+    margin: 10px 0;
+    text-align: left;
+    line-height: 1;
+    z-index: 100;
+    color: #8892b0;
 }
 
 .orange{
@@ -146,18 +156,23 @@ nav,
 .dark-theme .section__title,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
-.dark-theme .fa-adjust,
-.dark-theme .header__para
+.dark-theme .fa-adjust
 {
 color: white;
 }
-
+.dark-theme .header__para{
+    color: #8892b0;;
+}
+.dark-theme .social__link{
+    background-color: #64ffda;
+    color: #0a192f;
+}
 .dark-theme section{
-background-color: #242424;
+background-color:#0a192f;
 }
 
 .dark-theme #personal-logo{
-    filter: none;
+    filter: invert(1);
 }
 
 .dark-theme .scroll__icon{
@@ -173,7 +188,7 @@ background-color: #242424;
 }
 
 .dark-theme .orange{
-    color: #f06449;
+    color:#64ffda;
 }
 
 .dark-theme .link__hover-effect--black:after{
@@ -194,9 +209,14 @@ Landing
     min-height: 100vh;
 }
 
+#fractal-tree{
+    width: 250px;
+    height: 100%;
+    padding-bottom: 12px;
+}
 .header{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -205,9 +225,11 @@ Landing
 }
 
 .header__para{
-    font-size: 20px;
-    line-height: 2;
-    max-width: 450px;
+    font-size: 22px;
+    line-height: 1.4;
+    max-width: 530px;
+    color: #8892b0;
+    
 }
 
 .social__list{
@@ -234,6 +256,10 @@ Landing
     height: 70px;
     font-size: 32px;
     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: none;
     background-color: #242424;
     color: white;
@@ -689,6 +715,9 @@ color: white;
 }
 
 @media (max-width: 768px){
+    #fractal-tree{
+        display: none;
+    }
     .title{
         font-size: 60px;
 
@@ -756,4 +785,25 @@ color: white;
 
 textarea{
     resize:none;
+}
+
+
+h1 {
+    font-family: "NTR", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s steps(1) infinite;
+    color: #64ffda;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
