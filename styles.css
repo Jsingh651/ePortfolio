@@ -217,11 +217,11 @@ Landing
 .header{
     position: absolute;
     top: 45%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1000px;
-    padding: 0 30px;
+    
 }
 
 .header__para{
@@ -713,6 +713,59 @@ color: white;
     left: 80vw;
     width: 15px;
 }
+/* About me */
+.dark-theme {
+    background-color: #0a192f;
+}
+
+#about-me{
+    padding: 0 60px;
+
+}
+.about-me_desc{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.right_about-me{
+    width: 50%;
+}
+.meimg{
+    width: 300px;
+    border-radius: 6px;
+    margin-left: 20%;
+}
+.left_about-me{
+width: 50%;
+}
+.about-me_title{
+    text-align: start;
+}
+.left_list_tech-title{
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.stack_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    max-width: 50px;
+    margin-bottom: 12px;
+    
+  }
+.dark-theme .stack_list{
+    color: #8892b0;
+}
+  .stack {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 150px; /* adjust the width */
+  }
+  .stack i {
+    margin-right: 10px;
+  }
 
 @media (max-width: 768px){
     #fractal-tree{
@@ -806,4 +859,116 @@ h1 {
     50% {
         opacity: 0;
     }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .joblist-container {
+    display: flex;
+  }
+  
+  .joblist-tabs {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .joblist-tabs:before {
+    content: '';
+    position: absolute;
+    height: 300px; /* Fixed height for the line */
+    width: 1px;
+    background-color: #444;
+    right: 0;
+  }
+  
+  .joblist-active-line {
+    position: absolute;
+    height: 40px; /* Adjust this value to match the height of the tab */
+    width: 3px;
+    background-color: #64ffda;
+    right: -1.5px;
+    transition: top 0.3s; /* Add a transition for smooth animation */
+  }
+  
+  
+  .joblist-tab {
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #fff;
+    width: 200px;
+    transition: background-color 0.3s;
+  }
+  
+  .joblist-tab:hover {
+    background-color: rgba(68, 68, 68, 0.5); /* Change the color with an alpha value for fade effect */
+}
+  
+  .joblist-tab.active {
+    background-color: transparent;
+    color: #64ffda;
+  }
+  
+  .joblist-content {
+    position: relative;
+    width: 100%;
+  }
+  
+  .joblist-panel {
+    display: none;
+    padding: 10px;
+    background-color: transparent;
+  }
+  
+  .joblist-panel.active {
+    display: block;
+  }
+  
+  .joblist-job-title,
+  .joblist-job-company {
+    display: inline;
+    font-family: "NTR", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8892b0;
+  }
+  .joblist-job-company {
+    color: #64ffda;
+    font-style: normal;
+  }
+  .joblist-job-title {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .joblist-job-company {
+    font-style: italic;
+  }
+  
+  .joblist-duration {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.hr {
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #444;
+}
+
+.job-description {
+    padding-left: 20px;
+}
+
+#joblist{
+    height: 200vw;
 }

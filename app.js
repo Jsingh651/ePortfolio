@@ -139,3 +139,93 @@ const sketch = p5 => {
 };
 
 new p5(sketch);
+
+
+const experienceItems = {
+    "Coding Dojo": {
+      jobTitle: "Software Development Student @" ,
+      duration: "AUG 2022 - PRESENT",
+      desc: [
+        "Participated in collaborative projects with students from across the country to enhance coding skills and gain hands-on experience in software development.",
+        "Engaged in hands-on coding activities and worked on real-world projects to gain practical experience in software development and technology.",
+        "Enhanced knowledge of distributed computing, storage, and indexing systems by completing hands-on projects and working alongside experienced software engineers."
+      ]
+    },
+    "Sierra College": {
+      jobTitle: "Computer Science Student @",
+      duration: "JULY 2021 - CURRENT",
+      desc: [
+        "Learning about different Data Structures, Algorithms, Web Development and much more.",
+        " Expected to graduate with a bachelors degree in May 2024."
+      ]
+    },
+    Vector: {
+      jobTitle: "Assistant Manager @",
+      duration: "MAR 2020 - SEP 2021",
+      desc: [
+        "Helped train and manage a team of 14 associates and which led to an increase in revenue.",
+        "Skills I learned from working as an assistant manager are incredibly transferable to software development, where collaboration, communication, and data analysis are key to success.",
+      ]
+    },
+  };
+  
+  const tabsContainer = document.querySelector(".joblist-tabs");
+  const contentContainer = document.querySelector(".joblist-content");
+  
+  Object.keys(experienceItems).forEach((key, i) => {
+    const tab = document.createElement("div");
+    tab.classList.add("joblist-tab");
+    tab.dataset.index = i;
+    tab.innerText = key;
+    tabsContainer.appendChild(tab);
+  
+    const panel = document.createElement("div");
+    panel.classList.add("joblist-panel");
+    panel.dataset.index = i;
+    panel.innerHTML = `
+      <span class="joblist-job-title">${experienceItems[key]["jobTitle"]} </span>
+      <span class="joblist-job-company">${key}</span>
+      <div class="joblist-duration">${experienceItems[key]["duration"]}</div>
+      <ul class="job-description">
+        ${experienceItems[key]["desc"].map(descItem => `<li>${descItem}</li>`).join('')}
+      </ul>
+    `;
+    contentContainer.appendChild(panel);
+  
+    tab.addEventListener("click", (event) => {
+      const selectedIndex = event.target.dataset.index;
+  
+      document.querySelectorAll(".joblist-tab").forEach((tab) => {
+        if (tab.dataset.index === selectedIndex) {
+          tab.classList.add("active");
+        } else {
+          tab.classList.remove("active");
+        }
+      });
+  
+      document.querySelectorAll(".joblist-panel").forEach((panel) => {
+        if (panel.dataset.index === selectedIndex) {
+          panel.classList.add("active");
+        } else {
+          panel.classList.remove("active");
+        }
+      });
+    });
+  
+    if (i === 0) {
+      tab.classList.add("active");
+      panel.classList.add("active");
+    }
+  });
+  const tabs = document.querySelectorAll('.joblist-tab');
+  const activeLine = document.createElement('div');
+  activeLine.classList.add('joblist-active-line');
+  document.querySelector('.joblist-tabs').appendChild(activeLine);
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      const tabHeight = tab.offsetHeight;
+      const tabTop = tab.offsetTop;
+      activeLine.style.top = `${tabTop}px`;
+    });
+  });
