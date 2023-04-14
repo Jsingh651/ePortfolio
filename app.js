@@ -146,25 +146,25 @@ const experienceItems = {
       jobTitle: "Software Development Student @" ,
       duration: "AUG 2022 - PRESENT",
       desc: [
-        "Participated in collaborative projects with students from across the country to enhance coding skills and gain hands-on experience in software development.",
-        "Engaged in hands-on coding activities and worked on real-world projects to gain practical experience in software development and technology.",
-        "Enhanced knowledge of distributed computing, storage, and indexing systems by completing hands-on projects and working alongside experienced software engineers."
+        " <i class='fas fa-play'></i> Participated in collaborative projects with students from across the country to enhance coding skills and gain hands-on experience in software development.",
+        "<i class='fas fa-play'></i> Engaged in hands-on coding activities and worked on real-world projects to gain practical experience in software development and technology.",
+        "<i class='fas fa-play'></i> Enhanced knowledge of distributed computing, storage, and indexing systems by completing hands-on projects and working alongside experienced software engineers."
       ]
     },
     "Sierra College": {
       jobTitle: "Computer Science Student @",
       duration: "JULY 2021 - CURRENT",
       desc: [
-        "Learning about different Data Structures, Algorithms, Web Development and much more.",
-        " Expected to graduate with a bachelors degree in May 2024."
+        "<i class='fas fa-play'></i> Learning about different Data Structures, Algorithms, Web Development and much more.",
+        "<i class='fas fa-play'></i>  Expected to graduate with a bachelors degree in May 2024."
       ]
     },
     Vector: {
       jobTitle: "Assistant Manager @",
       duration: "MAR 2020 - SEP 2021",
       desc: [
-        "Helped train and manage a team of 14 associates and which led to an increase in revenue.",
-        "Skills I learned from working as an assistant manager are incredibly transferable to software development, where collaboration, communication, and data analysis are key to success.",
+        "<i class='fas fa-play'></i> Helped train and manage a team of 14 associates and which led to an increase in revenue.",
+        "<i class='fas fa-play'></i> Skills I learned from working as an assistant manager are incredibly transferable to software development, where collaboration, communication, and data analysis are key to success.",
       ]
     },
   };
