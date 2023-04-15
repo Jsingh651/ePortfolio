@@ -12,6 +12,7 @@
   <script src="https://kit.fontawesome.com/e53bf076c4.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script type="text/javascript">
     (function () {
@@ -28,12 +29,7 @@
       </figure>
       <ul class="nav__link--list">
         <li class="nav__link">
-          <a href="#" class="nav__link--anchor 
-              link__hover--effect 
-              link__hover-effect--black">About</a>
-        </li>
-        <li class="nav__link">
-          <a href="#" class="nav__link--anchor 
+          <a href="#projects" class="nav__link--anchor 
               link__hover--effect 
               link__hover-effect--black">Projects</a>
         </li>
@@ -44,14 +40,13 @@
               ">Contact</a>
         </li>
         <li class="nav__link click" onclick="toggleContrast()">
-          <a href="#" class="nav__link--anchor 
+          <a href="." class="nav__link--anchor 
               link__hover--effect 
               link__hover-effect--black"><i class="fas fa-adjust"></i></a>
         </li>
       </ul>
     </nav>
     <header class="header">
-      <div class="header__content">
         <div class="fractal_tree" id="fractal-tree"></div>
 
         <h1 class="title"><span class="typing"></span><span class="cursor">|</span></h1>
@@ -59,16 +54,15 @@
         <p class="header__para">
           I'm a software engineer based in Sacramento. I have great interest in full-stack development, artificial
           intelligence, human-computer interactions, and everything in between.
-          <!-- Here's a bit more <b class="orange click" onclick="toggleModal()"> about me.</b> -->
         </p>
         <div class="social__list">
-          <a href="htps://www.linkedin.com/in/jang-singh" target="_blank" class="social__link click ">
+          <a href="https://www.linkedin.com/in/jang-singh-7b1484250/" target="_blank" class="social__link click ">
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="https://github.com/Jsingh651" target="_blank" class="social__link click">
             <i class="fab fa-github"></i>
           </a>
-          <a href="./assets/David Bragg Resum.pdf" target="_blank" class="social__link click">
+          <a href="./assets//JangSinghRresume.pdf" target="_blank" class="social__link click">
             <i class="fas fa-file-pdf"></i>
           </a>
         </div>
@@ -79,7 +73,9 @@
         <i class="fas fa-envelope"></i>
       </button>
     </a>
-    <a href="#about-me" class="scroll">
+    
+    
+    <a href="#education" class="scroll">
       <div class="scroll__icon click"></div>
     </a>
 
@@ -89,8 +85,8 @@
         <h3 class="modal__title model__title--about">Here's more about me</h3>
         <h4 class="modal__sub-title model__sub-title--about">Frontend software developer</h4>
         <p class="modal__para">
-          I'm a 20 year-old <span class="orange">software engineer </span> from california with a strong passion for
-          developing websites with great <span class="orange"> user experience.</span>
+          I'm a 20 year-old <span class="orange bolded">software engineer </span> from california with a strong passion for
+          developing websites with great <span class="orange bolded"> user experience.</span>
           <br>
           I currently work on difficult engineering problems and learn from a team consisting of some of the most
           talented and experienced software engineers every day.
@@ -114,8 +110,28 @@
           </figure>
           <figure class="modal__language">
             <img class="modal__language--img"
-              src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="">
-            <span class="language__name">TypeScript</span>
+              src="./assets/reactLogo.png" alt="">
+            <span class="language__name">React</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="./assets/javaLogo.png" alt="">
+            <span class="language__name">Java</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="./assets/pythonLogo.png" alt="">
+            <span class="language__name">Python</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img flask"
+              src="./assets/flask.png" alt="">
+            <span class="language__name">Flask</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img flask"
+              src="./assets/databsase.png" alt="">
+            <span class="language__name">MySQL</span>
           </figure>
         </div>
       </div>
@@ -150,21 +166,11 @@
         </div>
       </div>
     </div>
-    <!-- <img src="./assets/semi circle.svg" class="shape shape--0">
-<img src="./assets/circle.svg" class="shape shape--1">
-<img src="./assets/squiggly.svg" class="shape shape--2">
-<img src="./assets/circle.svg" class="shape shape--3">
-<img src="./assets/triangle.svg" class="shape shape--4">
-<img src="./assets/circle.svg" class="shape shape--5">
-<img src="./assets/squiggly.svg" class="shape shape--6">
-<img src="./assets/circle.svg" class="shape shape--7">
-<img src="./assets/semi circle.svg" class="shape shape--8"> -->
-
   </section>
   <section id="about-me">
     <div class="container">
       <div class="row">
-        <h1 class="section__title about-me_title">/ about me </h1>
+        <h1 class="section__title about-me_title">/about me </h1>
 
         <div class="about-me_desc">
           <div class="left_about-me">
@@ -185,7 +191,7 @@
               <li class="stack"><i class="fas fa-play"></i>Spring</li>
               <li class="stack"><i class="fas fa-play"></i>MySQL</li>
             </ul>
-            <p class="header__para">Outside of work, I'm interested in following the developments of science. I also play
+            <p class="header__para about_me-header_para">Outside of work, I'm interested in following the developments of science. I also play
               a lot of video games. And code programs in my free time.</p>
           </div>
           <div class="right_about-me">
@@ -196,9 +202,11 @@
     </div>
   </section>
 
-  <!-- <section id="joblist">
-    <div class="container">
+  </section>
+  <section id="education">
+    <div class="container education_margin_bottom">
       <div class="row">
+        <h1 class="section__title education_me_title">/education & experience</h1>
         <div class="joblist-container">
           <div class="joblist-tabs">
           </div>
@@ -207,7 +215,9 @@
         </div>
       </div>
     </div>
-   </section> -->
+  </section>
+
+
   <section id="projects">
     <div class="container">
       <div class="row">
@@ -231,7 +241,7 @@
                   on businesses and also book flights!
                 </p>
                 <div class="project__description--links">
-                  <a href="https://github.com/Jsingh651/Zync.git" class="project__description--link">
+                  <a target="_blank" href="https://github.com/Jsingh651/Zync.git" class="project__description--link">
                     <i class="fab fa-github"></i>
                   </a>
                   <a href="#" class="project__description--link">
@@ -241,60 +251,6 @@
               </div>
             </div>
           </li>
-          <li class="project">
-                <div class="project__wrapper">
-                  <img src="./assets/blinker mockup.png" class="project__img" alt="">
-                  <div class="project__wrapper--bg"></div>
-                  <div class="project__description">
-                    <h3 class="project__description--title">
-                      Car sales project
-                    </h3>
-                    <h4 class="project__description--sub-title">
-                      Html, CSS, JavaScript, Vue
-                    </h4>
-                    <p class="project__description--para">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut 
-                      labore et dolore magna aliqua.
-                    </p>
-                    <div class="project__description--links">
-                      <a href="#" class="project__description--link">
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a href="#" class="project__description--link">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="project">
-                <div class="project__wrapper">
-                  <img src="./assets/blinker mockup.png" class="project__img" alt="">
-                  <div class="project__wrapper--bg"></div>
-                  <div class="project__description">
-                    <h3 class="project__description--title">
-                      Car sales project
-                    </h3>
-                    <h4 class="project__description--sub-title">
-                      Html, CSS, JavaScript, Vue
-                    </h4>
-                    <p class="project__description--para">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut 
-                      labore et dolore magna aliqua.
-                    </p>
-                    <div class="project__description--links">
-                      <a href="#" class="project__description--link">
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a href="#" class="project__description--link">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </li>
         </ul>
       </div>
     </div>
@@ -303,17 +259,17 @@
     <div class="container">
       <div class="row footer__row">
         <figure>
-          <img class="footer__logo--img" src="./assets/Jang singh logo.PNG" alt="">
+          <img class="footer__logo--img"  src="./assets/Jang singh logo.PNG" alt="">
         </figure>
         <div class="footer__social--list">
-          <a href="#" class="
+          <a href="https://github.com/Jsingh651" target="_blank" class="
                 footer__social--link
                 link__hover--effect
                 link__hover--effect--white
                 ">
             Github
           </a>
-          <a href="#" class="
+          <a href="https://www.linkedin.com/in/jang-singh-7b1484250/" target="_blank" class="
                 footer__social--link
                 link__hover--effect
                 link__hover--effect--white
@@ -327,7 +283,7 @@
                 ">
             Contact
           </a>
-          <a href="#" class="
+          <a href="./assets/JangSinghRresume.pdf" target="_blank" class="
                 footer__social--link
                 link__hover--effect
                 link__hover--effect--white
@@ -339,7 +295,5 @@
       </div>
     </div>
   </footer>
-
 </body>
-
 </html>

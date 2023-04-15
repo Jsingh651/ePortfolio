@@ -1,6 +1,7 @@
 let isModalOpen = false;
 let contrastToggle = false;
 
+
 function moveBackground(event){
 const shapes = document.querySelectorAll(".shape")
 const x =event.clientX / 20
@@ -32,27 +33,28 @@ function toggleContrast() {
     contrastToggle = true;
   }
 
-function contact(event) {
+  function contact(event) {
     event.preventDefault();
-     const loading = document.querySelector('.modal__overlay--loading')
+    const loading = document.querySelector('.modal__overlay--loading')
     const success = document.querySelector('.modal__overlay--success')
+    const userNameInput = document.querySelector('input[name="user_name"]');
+    const userName = userNameInput.value;
+    
     loading.classList += " modal__overlay--visible"
-     emailjs
-  .sendForm(
-        'service_bqx4s2d',
-        'template_74y021e',
-        event.target,
-        'K186n3klexni0hH1l'
-   ).then(()=>{
-        loading.classList.remove("modal__overlay--visible")
-        success.classList += " modal__overlay--visible"
-    }) .catch(()=> {
-        loading.classList.remove("modal__overlay--visible")
-   alert(
-    "The email service is temperorly unavailble. Please directly contact me on jangsing02@gmail.ocm"
-   )
-    })
-}
+    emailjs.sendForm(
+      'service_bqx4s2d',
+      'template_74y021e',
+      event.target,
+      'K186n3klexni0hH1l'
+    ).then(() => {
+      loading.classList.remove("modal__overlay--visible")
+      success.innerHTML = `Thanks for the message ${userName}! Looking forward to getting in contact with you soon!`;
+      success.classList += " modal__overlay--visible"
+    }).catch(() => {
+      loading.classList.remove("modal__overlay--visible")
+      alert("The email service is temporarily unavailable. Please directly contact me at jangsing02@gmail.com");
+    });
+  }
 
 function toggleModal(){
     if (isModalOpen){
@@ -119,7 +121,7 @@ const sketch = p5 => {
       p5.stroke(0); // Set stroke color to black
     }
     
-    branch(90);
+    branch(80);
   };
 
   function branch(len) {
@@ -146,25 +148,25 @@ const experienceItems = {
       jobTitle: "Software Development Student @" ,
       duration: "AUG 2022 - PRESENT",
       desc: [
-        " <i class='fas fa-play'></i> Participated in collaborative projects with students from across the country to enhance coding skills and gain hands-on experience in software development.",
-        "<i class='fas fa-play'></i> Engaged in hands-on coding activities and worked on real-world projects to gain practical experience in software development and technology.",
-        "<i class='fas fa-play'></i> Enhanced knowledge of distributed computing, storage, and indexing systems by completing hands-on projects and working alongside experienced software engineers."
+        "<span class='orange tablisttag'># </span> Participated in collaborative projects with students from across the country to gain hands-on experience in software development.",
+        "<span class='orange tablisttag'># </span> Engaged in hands-on coding activities and worked on real-world projects to gain practical experience.",
+        "<span class='orange tablisttag'># </span> Enhanced knowledge of distributed computing, storage, and indexing systems by working alongside experienced software engineers."
       ]
     },
     "Sierra College": {
       jobTitle: "Computer Science Student @",
       duration: "JULY 2021 - CURRENT",
       desc: [
-        "<i class='fas fa-play'></i> Learning about different Data Structures, Algorithms, Web Development and much more.",
-        "<i class='fas fa-play'></i>  Expected to graduate with a bachelors degree in May 2024."
+        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms, Web Development and much more.",
+        "<span class='orange tablisttag'># </span> Expected to graduate with a bachelors degree in May 2024."
       ]
     },
     Vector: {
       jobTitle: "Assistant Manager @",
       duration: "MAR 2020 - SEP 2021",
       desc: [
-        "<i class='fas fa-play'></i> Helped train and manage a team of 14 associates and which led to an increase in revenue.",
-        "<i class='fas fa-play'></i> Skills I learned from working as an assistant manager are incredibly transferable to software development, where collaboration, communication, and data analysis are key to success.",
+        "<span class='orange tablisttag'># </span> Helped train and manage a team of 14 associates and which led to an increase in revenue.",
+        "<span class='orange tablisttag'># </span> Skills I learned from working as an assistant manager are incredibly transferable to software development, where collaboration, communication, and data analysis are key to success.",
       ]
     },
   };
@@ -229,3 +231,6 @@ const experienceItems = {
       activeLine.style.top = `${tabTop}px`;
     });
   });
+
+
+  
