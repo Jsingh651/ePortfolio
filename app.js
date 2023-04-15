@@ -66,7 +66,7 @@ function toggleModal(){
 document.body.classList += " modal--open"
 }
 
-const text = "Hi, <span class='orange'>Jang</span> here.";
+const text = "Hi, <span class='orange'>Jaskiran</span> here.";
 const typingElement = document.querySelector(".typing");
 const typingSpeed = 150; // In milliseconds
 
@@ -232,5 +232,3 @@ const experienceItems = {
     });
   });
 
-
-  
