@@ -1061,9 +1061,7 @@ color: #dcdfe6;
         justify-content: center;
     }
 
-    #landing-page {
-        min-height: 80vw;
-    }
+   
 
     .header {
         display: flex;
@@ -1076,7 +1074,8 @@ color: #dcdfe6;
         transform: translate(0, 0);
         width: 100%;
         max-width: 1000px;
-        margin-top: 15%;
+        margin-top: 20%;
+        /* margin-bottom: 10%; */
     }
 
 
@@ -1133,7 +1132,9 @@ color: #dcdfe6;
         display: none;
     }
 
-
+    .nav__link--list{
+        padding: none;
+    }
     #fractal-tree {
         display: none;
     }
@@ -1181,6 +1182,35 @@ color: #dcdfe6;
 
 }
 
+@media(max-width: 500px) {
+    .stack {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        /* adjust the width */
+    }
+
+
+    .stack_list {
+        display: grid;
+        padding: 0;
+        text-align: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: fit-content;
+
+    }
+.mail__btn{
+    display: none;
+}
+#landing-page{
+    min-height: 90vw;
+}
+#about-me{
+    padding-top: 12%;
+}
+}
 @media(max-width: 500px) {
    
     header {
