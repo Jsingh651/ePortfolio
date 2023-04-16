@@ -33,28 +33,27 @@ function toggleContrast() {
     contrastToggle = true;
   }
 
-  function contact(event) {
+function contact(event) {
     event.preventDefault();
-    const loading = document.querySelector('.modal__overlay--loading')
+     const loading = document.querySelector('.modal__overlay--loading')
     const success = document.querySelector('.modal__overlay--success')
-    const userNameInput = document.querySelector('input[name="user_name"]');
-    const userName = userNameInput.value;
-    
     loading.classList += " modal__overlay--visible"
-    emailjs.sendForm(
-      'service_bqx4s2d',
-      'template_74y021e',
-      event.target,
-      'K186n3klexni0hH1l'
-    ).then(() => {
-      loading.classList.remove("modal__overlay--visible")
-      success.innerHTML = `Thanks for the message ${userName}! Looking forward to getting in contact with you soon!`;
-      success.classList += " modal__overlay--visible"
-    }).catch(() => {
-      loading.classList.remove("modal__overlay--visible")
-      alert("The email service is temporarily unavailable. Please directly contact me at jangsing02@gmail.com");
-    });
-  }
+     emailjs
+  .sendForm(
+        'service_bqx4s2d',
+        'template_74y021e',
+        event.target,
+        'K186n3klexni0hH1l'
+   ).then(()=>{
+        loading.classList.remove("modal__overlay--visible")
+        success.classList += " modal__overlay--visible"
+    }) .catch(()=> {
+        loading.classList.remove("modal__overlay--visible")
+   alert(
+    "The email service is temperorly unavailble. Please directly contact me on jangsing02@gmail.ocm"
+   )
+    })
+}
 
 function toggleModal(){
     if (isModalOpen){
@@ -232,3 +231,5 @@ const experienceItems = {
     });
   });
 
+
+  

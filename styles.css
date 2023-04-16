@@ -170,10 +170,12 @@ nav,
 .dark-theme .fa-adjust {
     color: white;
 }
-.title{
+
+.title {
     color: black;
 }
-.section__title{
+
+.section__title {
     color: black;
 }
 
@@ -426,19 +428,23 @@ nav {
 .modal--open .modal__contact {
     transform: translateX(0%);
 }
-.dark-theme .bolded{
+
+.dark-theme .bolded {
     font-weight: bold;
     color: #64ffda;
 }
-.dark-theme .flask{
-filter: invert(1);
+
+.dark-theme .flask {
+    filter: invert(1);
 }
+
 .modal__about {
     background-color: rgb(245, 245, 245);
     transform: translateX(-110%);
     color: black;
 }
-.dark-theme .modal__about{
+
+.dark-theme .modal__about {
     background-color: #0a192f;
     color: white;
 }
@@ -517,7 +523,7 @@ filter: invert(1);
     transition: all 300ms ease;
 }
 
-.dark-theme .form__submit{
+.dark-theme .form__submit {
     background-color: #64ffda;
     border: 2px solid #64ffda;
     color: rgb(0, 0, 0);
@@ -535,16 +541,18 @@ filter: invert(1);
     background-color: transparent;
 }
 
-.dark-theme .form__submit:hover{
+.dark-theme .form__submit:hover {
     border-color: white;
     color: white;
     background-color: transparent;
 }
+
 .form__submit:active {
     border-color: #f06449;
     color: #f06449;
 }
-.dark-theme .form__submit:active{
+
+.dark-theme .form__submit:active {
     border-color: #64ffda;
     color: #64ffda;
 }
@@ -823,7 +831,8 @@ body {
     right: -1.5px;
     transition: top 0.3s;
 }
-.dark-theme .joblist-active-line{
+
+.dark-theme .joblist-active-line {
     position: absolute;
     height: 40px;
     width: 3px;
@@ -841,7 +850,8 @@ body {
     width: 200px;
     transition: background-color 0.3s;
 }
-.joblist-tab{
+
+.joblist-tab {
     color: #000000;
     padding: 10px;
     cursor: pointer;
@@ -860,7 +870,8 @@ body {
     background-color: transparent;
     color: #64ffda;
 }
-.joblist-tab.active{
+
+.joblist-tab.active {
     color: #f06449;
 }
 
@@ -890,9 +901,10 @@ body {
     color: #8892b0;
 }
 
-.joblist-job-company{
+.joblist-job-company {
     color: #f06449;
 }
+
 .dark-theme .joblist-job-company {
     color: #64ffda;
     font-style: normal;
@@ -924,9 +936,11 @@ body {
     margin: 0;
     width: 86%;
 }
-.dark-theme .job-description li{
+
+.dark-theme .job-description li {
     color: #d0d9f6;
 }
+
 .job-description li {
     list-style-type: none;
     color: #000000;
@@ -953,11 +967,11 @@ body {
     text-align: left;
 }
 
-#education{
-    height: 50vw;
+#education {
+    padding: 0 60px;
 }
 
-#education {
+#about-me {
     padding: 0 60px;
 }
 
@@ -965,27 +979,35 @@ body {
 .dark-theme {
     background-color: #0a192f;
 }
-.stack{
+
+.stack {
     color: black;
 }
-.dark-theme .stack{
-color: #dcdfe6;
+
+.dark-theme .stack {
+    color: #dcdfe6;
 }
-.fa-play{
+
+.fa-play {
     color: #f06449;
 }
-.dark-theme .fa-play{
+
+.dark-theme .fa-play {
     color: #64ffda;
 }
+
 #about-me {
-    padding: 0 60px;
+    /* padding: 0 60px; */
 }
-.joblist-duration{
+
+.joblist-duration {
     color: black;
 }
-.dark-theme .joblist-duration{
+
+.dark-theme .joblist-duration {
     color: white;
 }
+
 .about-me_desc {
     display: flex;
     justify-content: space-around;
@@ -1052,8 +1074,79 @@ color: #dcdfe6;
 }
 
 @media (max-width: 768px) {
+    #education{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #about-me{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #landing-page{
+        padding-left: 0;
+        padding-right: 0;
+    }
     #education {
+        display: flex;
+        flex-direction: column;
+    }
+    .joblist-tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .job-description li{
+        font-size: 12px;
+    }
+    .tablisttag{
+        font-size: 14px;
+    }
+    .joblist-tab{
+        border-bottom: 1px solid #ddd;
+    }
+    .joblist-job-title{
+        text-align: center;
+        color: black;
+        font-size: 20px;
+    }
+    .joblist-job-company{
+        font-weight: bold;
+        color: #d85439;
+        font-size: 20px;
+    }
+    .joblist-content{
+        width: 90%;
+        height: fit-content;
+        background-color: #8892b0;
+        border-radius: 6px;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
+    .joblist-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .joblist-tabs:before {
         display: none;
+    }
+    .joblist-active-line{
+        display: none;
+    }
+    .education_margin_bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #landing-page {
+        min-height: 90vw;
     }
 
     .section__title {
@@ -1063,6 +1156,10 @@ color: #dcdfe6;
 
    
 
+    /* .joblist-tabs{
+        display: flex;
+        width: max-content;
+    } */
     .header {
         display: flex;
         flex-direction: column;
@@ -1132,9 +1229,10 @@ color: #dcdfe6;
         display: none;
     }
 
-    .nav__link--list{
+    .nav__link--list {
         padding: none;
     }
+
     #fractal-tree {
         display: none;
     }
@@ -1201,30 +1299,37 @@ color: #dcdfe6;
         max-width: fit-content;
 
     }
-.mail__btn{
-    display: none;
+
+    .mail__btn {
+        display: none;
+    }
+
+    #landing-page {
+        min-height: 90vw;
+    }
+
+    #about-me {
+        padding-top: 12%;
+    }
 }
-#landing-page{
-    min-height: 90vw;
-}
-#about-me{
-    padding-top: 12%;
-}
-}
+
 @media(max-width: 500px) {
-   
+
     header {
         justify-content: center;
         align-items: center;
     }
-    .left_about-me-para{
+
+    .left_about-me-para {
         font-size: 18px;
         width: 95%;
     }
+
     .title {
         font-size: 30px;
     }
-    .section__title{
+
+    .section__title {
         font-size: 26px;
     }
 
@@ -1263,7 +1368,7 @@ color: #dcdfe6;
     #personal-logo {
         display: none;
     }
-  
+
 }
 
 
@@ -1285,7 +1390,8 @@ h1 {
     animation: blink 1s steps(1) infinite;
     color: #64ffda;
 }
-.cursor{
+
+.cursor {
     display: inline-block;
     animation: blink 1s steps(1) infinite;
     color: #f06449;
