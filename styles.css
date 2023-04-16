@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -1061,7 +1062,7 @@ color: #dcdfe6;
     }
 
     #landing-page {
-        min-height: 52vw;
+        min-height: 80vw;
     }
 
     .header {
@@ -1132,9 +1133,6 @@ color: #dcdfe6;
         display: none;
     }
 
-    nav {
-        display: none;
-    }
 
     #fractal-tree {
         display: none;
@@ -1184,13 +1182,20 @@ color: #dcdfe6;
 }
 
 @media(max-width: 500px) {
+   
     header {
         justify-content: center;
         align-items: center;
     }
-
+    .left_about-me-para{
+        font-size: 18px;
+        width: 95%;
+    }
     .title {
-        font-size: 44px;
+        font-size: 30px;
+    }
+    .section__title{
+        font-size: 26px;
     }
 
     p {
@@ -1222,10 +1227,13 @@ color: #dcdfe6;
 }
 
 
-@media (max-height: 490px) {
+
+
+@media (max-width: 690px) {
     #personal-logo {
         display: none;
     }
+  
 }
 
 
