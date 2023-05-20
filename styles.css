@@ -1343,9 +1343,7 @@ body {
         display: none;
     }
 
-    .project__description--para {
-        display: none;
-    }
+  
 
     .project__description {
         left: 0;
@@ -1371,6 +1369,49 @@ body {
         display: none;
     }
 
+    .project__description {
+        position: absolute;
+        top: 50%;
+        /* left: 90px; */
+        font-size: 12px;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: opacity 300ms, transform 450ms ease;
+        color: white;
+        max-width: 550px;
+    }
+    
+    .project__wrapper:hover .project__wrapper--bg {
+        opacity: 0.7;
+    }
+    
+
+    
+    .project__description--title {
+        font-size: 20px;
+        padding-top: 12px;
+    }
+    
+    .project__description--sub-title {
+        margin: 0 0;
+        font-size: 14px;
+    }
+    
+    .project__description--link {
+        color: white;
+        font-size: 10px;
+        margin-right: 20px;
+    }
+    
+    .project__description--para {
+        font-size: 14px;
+    }
+    .fa-link{
+        margin-right: 0 !important;
+    }
+    .two_link{
+        margin-right: 0 !important;
+    }
 }
 
 
@@ -1402,5 +1443,40 @@ h1 {
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+@media(max-width: 400px){
+    .title{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .sub{
+        display: none;
+    }
+    .header__para{
+    margin-top: 20px;
+    font-size: 16px;
+    }
+    #about-me{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .container{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .education_me_title{
+        margin-bottom: 10px;
+        margin-top: 12px;
+    }
+    .joblist-tab{
+        font-size: 16px;
+    }
+    .section__title{
+        margin-bottom: 10px;
+    }
+    .specical{
+        padding-top: 14px;
     }
 }
