@@ -50,7 +50,7 @@ function contact(event) {
     }) .catch(()=> {
         loading.classList.remove("modal__overlay--visible")
    alert(
-    "The email service is temperorly unavailble. Please directly contact me on jangsing02@gmail.ocm"
+    "The email service is temporarily unavailable. Please directly contact me on jangsing02@gmail.com"
    )
     })
 }
