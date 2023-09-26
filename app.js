@@ -153,11 +153,11 @@ const experienceItems = {
       ]
     },
     "Sierra College": {
-      jobTitle: "Computer Science Student @",
+      jobTitle: "Math Student @",
       duration: "JULY 2021 - CURRENT",
       desc: [
-        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms, Web Development and much more.",
-        "<span class='orange tablisttag'># </span> Expected to graduate with a bachelors degree in May 2024."
+        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms/",
+        "<span class='orange tablisttag'># </span> Expected to graduate with a associates degree in May 2022."
       ]
     },
     Vector: {
