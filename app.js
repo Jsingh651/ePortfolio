@@ -143,6 +143,33 @@ new p5(sketch);
 
 
 const experienceItems = {
+  "3BX": {
+    jobTitle: "Full Stack Developer @" ,
+    duration: "AUG 2023 - PRESENT",
+    desc: [
+      "<span class='orange tablisttag'># </span> Developed and Launched Version 1 of 3BX a Multi-User Subscription Based App.",
+      "<span class='orange tablisttag'># </span> Integrated Payment API’s for Secure and Seamless Transactions Resulting in 90% Less Errors.",
+      "<span class='orange tablisttag'># </span> Implemented Lambda and S3 for Faster Response times and Scalability for 200% More Users."
+    ]
+  },
+  "Pineville Initative": {
+    jobTitle: "Software Engineer Intern @" ,
+    duration: "AUG 2022 - PRESENT",
+    desc: [
+      "<span class='orange tablisttag'># </span> Contributed to Improved User Experience by Developing key Features and the app's Roadmap.",
+      "<span class='orange tablisttag'># </span> Managed day-to-day Operations, Ensuring the Project's Completion and Success.",
+      "<span class='orange tablisttag'># </span> Designed and Integrated a Data Visualization CMS System, Ensuring Real Time Data Accessibility."
+    ]
+  },
+  "Frontend Tutor": {
+    jobTitle: "CEO and Founder @" ,
+    duration: "MAY 2023 - PRESENT",
+    desc: [
+      "<span class='orange tablisttag'># </span> Established an Educational Platform Focused on Teaching Individuals Frontend Development.",
+      "<span class='orange tablisttag'># </span> Managed a Team of 7 Employees, including UX/UI designers, Developers, and Marketing Experts.",
+      "<span class='orange tablisttag'># </span> Enforced Strict Adherence to Deadlines, Organized Critical Meetings, and Delegated Tasks among Team Members."
+    ]
+  },
     "Coding Dojo": {
       jobTitle: "Software Development Student @" ,
       duration: "AUG 2022 - PRESENT",
@@ -153,21 +180,14 @@ const experienceItems = {
       ]
     },
     "Sierra College": {
-      jobTitle: "Math Student @",
+      jobTitle: "Computer Science Student @",
       duration: "JULY 2021 - CURRENT",
       desc: [
-        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms/",
-        "<span class='orange tablisttag'># </span> Expected to graduate with a associates degree in May 2022."
+        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms, and Web development technologies",
+        "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple projects.",
+        "<span class='orange tablisttag'># </span> Current GPA of 3.7 and expected to graduate with a bachelors degree in May 2025 ."
       ]
-    },
-    Vector: {
-      jobTitle: "Assistant Manager @",
-      duration: "MAR 2020 - SEP 2021",
-      desc: [
-        "<span class='orange tablisttag'># </span> Helped train and manage a team of 14 associates and which led to an increase in revenue.",
-        "<span class='orange tablisttag'># </span> Skills I learned from working as an assistant manager are incredibly transferable to software development, where collaboration, communication, and data analysis are key to success.",
-      ]
-    },
+    }
   };
   
   const tabsContainer = document.querySelector(".joblist-tabs");
