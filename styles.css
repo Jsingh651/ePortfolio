@@ -16,6 +16,11 @@ html {
 
 li {
     list-style-type: none;
+
+}
+
+li.stack{
+    font-size: 22px;
 }
 
 p {
@@ -1056,9 +1061,10 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    width: 150px;
+    width: 200px;
     /* adjust the width */
 }
+
 
 .stack i {
     margin-right: 10px;
