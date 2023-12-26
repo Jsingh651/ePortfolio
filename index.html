@@ -1,255 +1,351 @@
-let isModalOpen = false;
-let contrastToggle = false;
+<!DOCTYPE html>
+<html lang="en">
 
-
-function moveBackground(event){
-const shapes = document.querySelectorAll(".shape")
-const x =event.clientX / 20
-const y =event.clientY / 20
-
-for (let i =0; i < shapes.length; ++i){
-    const isOdd = i % 2 !== 0;
-    const oddIntiger = isOdd ? -1: 1
-    shapes[i].style.transform = `translate(${x * oddIntiger }px, ${y * oddIntiger }px)`
-}
-
-}
-
-function toggleContrast() {
-    contrastToggle = !contrastToggle;
-    if (contrastToggle) {
-      document.body.classList += " dark-theme";
-      localStorage.setItem("contrastToggle", "true");
-    } else {
-      document.body.classList.remove("dark-theme");
-      localStorage.setItem("contrastToggle", "false");
-    }
-  }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Discover the best talent here!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jang's Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./app.js" defer></script>
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e53bf076c4.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
   
-  // On page load, check if dark mode is enabled in local storage
-  const isDarkModeEnabled = localStorage.getItem("contrastToggle") === "true";
-  if (isDarkModeEnabled) {
-    document.body.classList += " dark-theme";
-    contrastToggle = true;
-  }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("K186n3klexni0hH1l");
+    })();
+  </script>
+</head>
 
-function contact(event) {
-    event.preventDefault();
-     const loading = document.querySelector('.modal__overlay--loading')
-    const success = document.querySelector('.modal__overlay--success')
-    loading.classList += " modal__overlay--visible"
-     emailjs
-  .sendForm(
-        'service_bqx4s2d',
-        'template_74y021e',
-        event.target,
-        'K186n3klexni0hH1l'
-   ).then(()=>{
-        loading.classList.remove("modal__overlay--visible")
-        success.classList += " modal__overlay--visible"
-    }) .catch(()=> {
-        loading.classList.remove("modal__overlay--visible")
-   alert(
-    "The email service is temporarily unavailable. Please directly contact me on jangsing02@gmail.com"
-   )
-    })
-}
-
-function toggleModal(){
-    if (isModalOpen){
-        isModalOpen = false
-        return document.body.classList.remove('modal--open')
-
-    }
-    isModalOpen = true
-document.body.classList += " modal--open"
-}
-
-const text = "Hi, <span class='orange'>Jang</span> here.";
-const typingElement = document.querySelector(".typing");
-const typingSpeed = 150; // In milliseconds
-
-function typeText() {
-  let htmlText = "";
-  let charIndex = 0;
-
-  const typeNextChar = () => {
-    if (charIndex < text.length) {
-      let currentChar = text[charIndex];
-      htmlText += currentChar;
-      charIndex++;
-
-      // Check if we are inside an HTML tag
-      if (currentChar === "<") {
-        while (charIndex < text.length && text[charIndex] !== ">") {
-          htmlText += text[charIndex];
-          charIndex++;
-        }
-        htmlText += text[charIndex];
-        charIndex++;
-      }
-
-      typingElement.innerHTML = htmlText;
-      setTimeout(typeNextChar, typingSpeed);
-    }
-  };
-
-  typeNextChar();
-}
-
-document.addEventListener("DOMContentLoaded", typeText);
-
-
-let angle;
-
-const sketch = p5 => {
-  p5.setup = () => {
-    let canvas = p5.createCanvas(400, 400);
-    canvas.parent('fractal-tree');
-    angle = p5.PI / 4;
-  };
-
-  p5.draw = () => {
-    p5.clear();
-    p5.translate(200, p5.height);
-    angle = p5.map(p5.sin(p5.frameCount * 0.01), -1, 1, p5.PI / 2, p5.PI / 16); // vary the angle using sin()
-    
-    if (contrastToggle) { // If dark mode is enabled
-      p5.stroke(255); // Set stroke color to white
-    } else {
-      p5.stroke(0); // Set stroke color to black
-    }
-    
-    branch(80);
-  };
-
-  function branch(len) {
-    p5.line(0, 0, 0, -len);
-    p5.translate(0, -len);
-    if (len > 4) {
-      p5.push();
-      p5.rotate(angle);
-      branch(len * 0.67);
-      p5.pop();
-      p5.push();
-      p5.rotate(-angle);
-      branch(len * 0.67);
-      p5.pop();
-    }
-  }
-};
-
-new p5(sketch);
-
-
-const experienceItems = {
-  "3BX": {
-    jobTitle: "Full Stack Developer @" ,
-    duration: "AUG 2023 - PRESENT",
-    desc: [
-      "<span class='orange tablisttag'># </span> Developed and Launched Version 1 of 3BX a Multi-User Subscription Based App.",
-      "<span class='orange tablisttag'># </span> Integrated Payment API’s for Secure and Seamless Transactions Resulting in 90% Less Errors.",
-      "<span class='orange tablisttag'># </span> Implemented Lambda and S3 for Faster Response times and Scalability for 200% More Users."
-    ]
-  },
-  "Pineville Initative": {
-    jobTitle: "Software Engineer Intern @" ,
-    duration: "AUG 2022 - PRESENT",
-    desc: [
-      "<span class='orange tablisttag'># </span> Contributed to Improved User Experience by Developing key Features and the app's Roadmap.",
-      "<span class='orange tablisttag'># </span> Managed day-to-day Operations, Ensuring the Project's Completion and Success.",
-      "<span class='orange tablisttag'># </span> Designed and Integrated a Data Visualization CMS System, Ensuring Real Time Data Accessibility."
-    ]
-  },
-  "Frontend Tutor": {
-    jobTitle: "CEO and Founder @" ,
-    duration: "MAY 2023 - PRESENT",
-    desc: [
-      "<span class='orange tablisttag'># </span> Established an Educational Platform Focused on Teaching Individuals Frontend Development.",
-      "<span class='orange tablisttag'># </span> Managed a Team of 7 Employees, including UX/UI designers, Developers, and Marketing Experts.",
-      "<span class='orange tablisttag'># </span> Enforced Strict Adherence to Deadlines, Organized Critical Meetings, and Delegated Tasks among Team Members."
-    ]
-  },
-    "Coding Dojo": {
-      jobTitle: "Software Development Student @" ,
-      duration: "AUG 2022 - PRESENT",
-      desc: [
-        "<span class='orange tablisttag'># </span> Participated in collaborative projects with students from across the country to gain hands-on experience in software development.",
-        "<span class='orange tablisttag'># </span> Engaged in hands-on coding activities and worked on real-world projects to gain practical experience.",
-        "<span class='orange tablisttag'># </span> Enhanced knowledge of distributed computing, storage, and indexing systems by working alongside experienced software engineers."
-      ]
-    },
-    "Sierra College": {
-      jobTitle: "Computer Science Student @",
-      duration: "JULY 2021 - CURRENT",
-      desc: [
-        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms, and Web development technologies",
-        "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple projects.",
-        "<span class='orange tablisttag'># </span> Current GPA of 3.7 and expected to graduate with a bachelors degree in May 2025 ."
-      ]
-    }
-  };
-  
-  const tabsContainer = document.querySelector(".joblist-tabs");
-  const contentContainer = document.querySelector(".joblist-content");
-  
-  Object.keys(experienceItems).forEach((key, i) => {
-    const tab = document.createElement("div");
-    tab.classList.add("joblist-tab");
-    tab.dataset.index = i;
-    tab.innerText = key;
-    tabsContainer.appendChild(tab);
-  
-    const panel = document.createElement("div");
-    panel.classList.add("joblist-panel");
-    panel.dataset.index = i;
-    panel.innerHTML = `
-      <span class="joblist-job-title">${experienceItems[key]["jobTitle"]} </span>
-      <span class="joblist-job-company">${key}</span>
-      <div class="joblist-duration">${experienceItems[key]["duration"]}</div>
-      <ul class="job-description">
-        ${experienceItems[key]["desc"].map(descItem => `<li>${descItem}</li>`).join('')}
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)" )>
+    <nav>
+      <figure>
+        <img id="personal-logo" src="/assets/jangsinglogo.png" alt="" />
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link">
+          <a href="#projects" class="nav__link--anchor 
+              link__hover--effect 
+              link__hover-effect--black">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="nav__link--anchor 
+              link__hover--effect 
+              link__hover-effect--black
+              ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="." class="nav__link--anchor 
+              link__hover--effect 
+              link__hover-effect--black"><i class="fas fa-adjust"></i></a>
+        </li>
       </ul>
-    `;
-    contentContainer.appendChild(panel);
-  
-    tab.addEventListener("click", (event) => {
-      const selectedIndex = event.target.dataset.index;
-  
-      document.querySelectorAll(".joblist-tab").forEach((tab) => {
-        if (tab.dataset.index === selectedIndex) {
-          tab.classList.add("active");
-        } else {
-          tab.classList.remove("active");
-        }
-      });
-  
-      document.querySelectorAll(".joblist-panel").forEach((panel) => {
-        if (panel.dataset.index === selectedIndex) {
-          panel.classList.add("active");
-        } else {
-          panel.classList.remove("active");
-        }
-      });
-    });
-  
-    if (i === 0) {
-      tab.classList.add("active");
-      panel.classList.add("active");
-    }
-  });
-  const tabs = document.querySelectorAll('.joblist-tab');
-  const activeLine = document.createElement('div');
-  activeLine.classList.add('joblist-active-line');
-  document.querySelector('.joblist-tabs').appendChild(activeLine);
+    </nav>
+    <header class="header">
+        <div class="fractal_tree" id="fractal-tree"></div>
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      const tabHeight = tab.offsetHeight;
-      const tabTop = tab.offsetTop;
-      activeLine.style.top = `${tabTop}px`;
-    });
-  });
+        <h1 class="title"><span class="typing"></span><span class="cursor">|</span></h1>
+        <h2 class="title sub">I create stuff when im bored.</h2>
+        <p class="header__para">
+          I'm a software engineer based in Sacramento. I have great interest in full-stack development, artificial
+          intelligence, human-computer interactions, and everything in between.
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/jang-singh-7b1484250/" target="_blank" class="social__link click ">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Jsingh651" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="./assets/singhJangResume.pdf" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+    
+    
+    <a href="#education" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+
+    <div class="modal">
+
+      <div class="modal__half modal__about">
+        <h3 class="modal__title model__title--about">Here's more about me</h3>
+        <h4 class="modal__sub-title model__sub-title--about">Full-stack software engineer</h4>
+        <p class="modal__para">
+          I'm a 20 year-old <span class="orange bolded">Full-stack software engineer </span> from California with a strong passion for
+          developing websites with great <span class="orange bolded"> user experience.</span>
+          <br>
+          I currently work on difficult engineering problems and learn from a team consisting of some of the most
+          talented and experienced software engineers every day.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+            <span class="language__name">Css</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+              alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="./assets/reactLogo.png" alt="">
+            <span class="language__name">React</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="./assets/javaLogo.png" alt="">
+            <span class="language__name">Java</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="./assets/pythonLogo.png" alt="">
+            <span class="language__name">Python</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img flask"
+              src="./assets/flask.png" alt="">
+            <span class="language__name">Flask</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img flask"
+              src="./assets/databsase.png" alt="">
+            <span class="language__name">MySQL</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+
+        <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+        <h3 class="modal__sub-title modal__sub-title-contact">I am currently open to new opportunities</h3>
+        <form action="" id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="for__item--label">Your email</label>
+            <input class="input" name="user_name" type="email"> </input>
+          </div>
+          <div class="form__item">
+            <label class="for__item--label">Your Name</label>
+            <input class="input" name="user_email" type="text"> </input>
+          </div>
+          <div class="form__item">
+            <label class="for__item--label">Message</label>
+            <textarea class="input" name="message" type="text"> </textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send it my way
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading ">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message looking forward to get in contact with you soon!
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about-me">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title about-me_title">/about me </h1>
+
+        <div class="about-me_desc">
+          <div class="left_about-me">
+            <p class="left_about-me-para header__para">Third year Computer science Student at <a
+                class="orange" target="_blank" href="https://www.sierracollege.edu/">Sierra College</a> in Sacramento,
+              CA, navigating the field of CS, and Math. With a web development certificate from <a target="_blank" class="orange"
+                href="https://info.codingdojo.com/data-science-v4/?msclkid=67ae65acd4b61ef6c86e019489814548&utm_source=bing&utm_medium=cpc&utm_campaign=data_science_bootcamp_search_nationwide&utm_term=%2BData%20%2BScience%20%2BTraining%20%2BProgram&utm_content=Data_Science_Training_Program">Coding
+                Dojo.</a></p>
+            <h3 class="left_list_tech-title header__para">Here are some technologies I have been working with:</h3>
+            <ul class="stack_list">
+              <li class="stack"><i class="fas fa-play"></i>Javascript</li>
+              <li class="stack"><i class="fas fa-play"></i>Java</li>
+              <li class="stack"><i class="fas fa-play"></i>Python</li>
+              <li class="stack"><i class="fas fa-play"></i>React</li>
+              <li class="stack"><i class="fas fa-play"></i>Next.js</li>
+              <li class="stack"><i class="fas fa-play"></i>Flask</li>
+              <li class="stack"><i class="fas fa-play"></i>Django</li>
+              <li class="stack"><i class="fas fa-play"></i>MySQL</li>
+              <li class="stack"><i class="fas fa-play"></i>MongoDB</li>
+              <li class="stack"><i class="fas fa-play"></i>AWS</li>
+            </ul>
+            <p class="header__para about_me-header_para">Outside of work, I like going to the gym, working on cars and I am also a Stock Options Trader!</p>
+          </div>
+          <div class="right_about-me">
+            <img class="meimg" src="./assets/me3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+  <section id="education">
+    <div class="container education_margin_bottom">
+      <div class="row">
+        <h1 class="section__title education_me_title">/education & experience</h1>
+        <div class="joblist-container">
+          <div class="joblist-tabs">
+          </div>
+          <div class="joblist-content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-  
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title specical">
+          Here are some of my <span class="orange">projects.</span>
+        </h1>
+        <li class="project">
+          <div class="project__wrapper">
+            <img src="./assets/frontendtutor.png" class="project__img" alt="">
+            <div class="project__wrapper--bg"></div>
+            <div class="project__description">
+              <h3 class="project__description--title">
+                Frontend Tutor
+              </h3>
+              <h4 class="project__description--sub-title">
+                Flask, Python, MySQL Git, AWS, Javascript, CSS, Typescript, Tailwind, EC2
+              </h4>
+              <p class="project__description--para">
+                Creator and owner of an education platform designed to teach students about frontend development, Built in Python with Flask, using technologies such as Stripe API, Flask-Mail and MySQL.
+              </p>
+              <div class="project__description--links">
+                <a target="_blank" href="https://github.com/Jsingh651/frontendtutor.git" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="http://www.frontendtutor.com" target="_blank" class="project__description--link two_link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/travel.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Travel Website
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, Python, FLask, MySQL
+                </h4>
+                <p class="project__description--para">
+                  User's are allowed to make accounts on the website and search for dream vaction spots. Leave reviews
+                  on businesses and also book flights!
+                </p>
+                <div class="project__description--links">
+                  <a target="_blank" href="https://github.com/Jsingh651/Zync.git" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="http://52.53.157.252" target="_blank" class="project__description--link two_link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/candyProject.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Ecommerce candy store
+                </h3>
+                <h4 class="project__description--sub-title">
+                  React, MongoDB, Mongo Cluster, Node.js, Express.js, CSS, Git
+                </h4>
+                <p class="project__description--para">
+                  Candy store that sells all type of candies and a user can purchase without creating a account and checkout through Paypal's payment portal. This was a group project for my bootcamp and I was incharge of Front end.
+                </p>
+                <div class="project__description--links">
+                  <a target="_blank" href="https://github.com/Alan-Lytton/candy_shop.git" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="http://52.33.105.171/" target="_blank" class="project__description--link two_link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <figure>
+          <img class="footer__logo--img"  src="./assets/Jang singh logo.PNG" alt="">
+        </figure>
+        <div class="footer__social--list">
+          <a href="https://github.com/Jsingh651" target="_blank" class="
+                footer__social--link
+                link__hover--effect
+                link__hover--effect--white
+                ">
+            Github
+          </a>
+          <a href="https://www.linkedin.com/in/jang-singh-7b1484250/" target="_blank" class="
+                footer__social--link
+                link__hover--effect
+                link__hover--effect--white
+                ">
+            Linkedin
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+                footer__social--link
+                link__hover--effect
+                link__hover--effect--white
+                ">
+            Contact
+          </a>
+          <a href="./assets/singhJangResume.pdf" target="_blank" class="
+                footer__social--link
+                link__hover--effect
+                link__hover--effect--white
+                ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright © 2023 Jang Singh</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
