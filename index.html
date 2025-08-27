@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jang's Website</title>
   <link rel="stylesheet" href="styles.css">
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   <script src="./app.js" defer></script>
   <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/e53bf076c4.js" crossorigin="anonymous"></script>
@@ -23,23 +24,25 @@
 </head>
 
 <body>
-  <section id="landing-page" onmousemove="moveBackground(event)" )>
+  <section id="landing-page" onmousemove="moveBackground(event)" >
     <nav>
       <figure>
         <img id="personal-logo" src="/assets/jangsinglogo.png" alt="" />
       </figure>
       <ul class="nav__link--list">
+       
+    
         <li class="nav__link">
           <a href="#projects" class="nav__link--anchor 
               link__hover--effect 
               link__hover-effect--black">Projects</a>
         </li>
         <li class="nav__link" onclick="toggleModal()">
-          <a href="#" class="nav__link--anchor 
+          <a href="./service.html" class="nav__link--anchor 
               link__hover--effect 
-              link__hover-effect--black
-              ">Contact</a>
+              link__hover-effect--black">Services</a>
         </li>
+      
         <li class="nav__link click" onclick="toggleContrast()">
           <a href="." class="nav__link--anchor 
               link__hover--effect 
@@ -63,7 +66,7 @@
           <a href="https://github.com/Jsingh651" target="_blank" class="social__link click">
             <i class="fab fa-github"></i>
           </a>
-          <a href="./assets/Resume.pdf" target="_blank" class="social__link click">
+          <a href="./assets/SWE-python-javascript-java-JangSingh copy.pdf" target="_blank" class="social__link click">
             <i class="fas fa-file-pdf"></i>
           </a>
         </div>
@@ -142,6 +145,7 @@
 
         <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
         <h3 class="modal__sub-title modal__sub-title-contact">I am currently open to new opportunities</h3>
+
         <form action="" id="contact__form" onsubmit="contact(event)">
           <div class="form__item">
             <label class="for__item--label">Your email</label>
@@ -168,6 +172,8 @@
       </div>
     </div>
   </section>
+
+
   <section id="about-me">
     <div class="container">
       <div class="row">
@@ -175,8 +181,8 @@
 
         <div class="about-me_desc">
           <div class="left_about-me">
-            <p class="left_about-me-para header__para">Third year Computer science Student at <a
-                class="orange" target="_blank" href="https://www.sierracollege.edu/">Sierra College</a> in Sacramento,
+            <p class="left_about-me-para header__para">Junior Computer science Student at <a
+                class="orange" target="_blank" href="https://www.csus.edu/">CSU Sacramento</a> in Sacramento,
               CA, navigating the field of CS, and Math. With a web development certificate from <a target="_blank" class="orange"
                 href="https://info.codingdojo.com/data-science-v4/?msclkid=67ae65acd4b61ef6c86e019489814548&utm_source=bing&utm_medium=cpc&utm_campaign=data_science_bootcamp_search_nationwide&utm_term=%2BData%20%2BScience%20%2BTraining%20%2BProgram&utm_content=Data_Science_Training_Program">Coding
                 Dojo.</a></p>
@@ -335,7 +341,7 @@
                 ">
             Contact
           </a>
-          <a href="./assets/singhJangResume.pdf" target="_blank" class="
+          <a href="./assets/SWE-python-javascript-java-JangSingh copy.pdf" target="_blank" class="
                 footer__social--link
                 link__hover--effect
                 link__hover--effect--white
@@ -343,7 +349,7 @@
             Resume
           </a>
         </div>
-        <div class="footer__copyright">Copyright © 2023 Jang Singh</div>
+        <div class="footer__copyright">Copyright © 2025 Jang Singh</div>
       </div>
     </div>
   </footer>
