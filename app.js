@@ -145,7 +145,7 @@ new p5(sketch);
 const experienceItems = {
   "Pineville Initative": {
     jobTitle: "Software Engineer Intern @" ,
-    duration: "JAN 2023 - APRIL 2023",
+    duration: "JAN 2024 - APRIL 2024",
     desc: [
       "<span class='orange tablisttag'># </span> Contributed to Improved User Experience by Developing key Features and the app's Roadmap.",
       "<span class='orange tablisttag'># </span> Managed day-to-day Operations, Ensuring the Project's Completion and Success.",
@@ -154,7 +154,7 @@ const experienceItems = {
   },
   "3BX": {
     jobTitle: "Full Stack Developer Intern @" ,
-    duration: "AUG 2023 - APRIL 2024",
+    duration: "AUG 2024 - APRIL 2025",
     desc: [
       "<span class='orange tablisttag'># </span> Developed and Launched Version 1 of 3BX a Multi-User Subscription Based App.",
       "<span class='orange tablisttag'># </span> Integrated Payment API’s for Secure and Seamless Transactions Resulting in 90% Less Errors.",
@@ -172,7 +172,7 @@ const experienceItems = {
   // },
     "Coding Dojo": {
       jobTitle: "Software Development Student @" ,
-      duration: "AUG 2022 - PRESENT",
+      duration: "AUG 2022 - January 2023",
       desc: [
         "<span class='orange tablisttag'># </span> Participated in collaborative projects with students from across the country to gain hands-on experience in software development.",
         "<span class='orange tablisttag'># </span> Engaged in hands-on coding activities and worked on real-world projects to gain practical experience.",
@@ -181,7 +181,7 @@ const experienceItems = {
     },
     "Sierra College": {
       jobTitle: "Computer Science Student @",
-      duration: "August 2022 - CURRENT",
+      duration: "August 2022 - May 2025",
       desc: [
         "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms, and Web development technologies",
         "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple projects.",
@@ -190,7 +190,7 @@ const experienceItems = {
     },
     "CSU Sacramento": {
       jobTitle: "Computer Science Student @",
-      duration: "August 2025 - CURRENT",
+      duration: "August 2025 - May 2027",
       desc: [
         "<span class='orange tablisttag'># </span> Learning about Project managment, Data Structures, Algorithms.",
         "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple projects.",
