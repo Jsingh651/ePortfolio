@@ -1,0 +1,9 @@
+{
+  "name": "eportfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jang Singh personal portfolio (static site)",
+  "engines": {
+    "node": "22.x"
+  }
+}
