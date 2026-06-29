@@ -143,58 +143,58 @@ new p5(sketch);
 
 
 const experienceItems = {
-  "Pineville Initative": {
-    jobTitle: "Software Engineer Intern @" ,
-    duration: "JAN 2024 - APRIL 2024",
+  "CARB": {
+    jobTitle: "Data Scientist / Software Developer @",
+    duration: "DEC 2025 - PRESENT",
     desc: [
-      "<span class='orange tablisttag'># </span> Contributed to Improved User Experience by Developing key Features and the app's Roadmap.",
-      "<span class='orange tablisttag'># </span> Managed day-to-day Operations, Ensuring the Project's Completion and Success.",
-      "<span class='orange tablisttag'># </span> Designed and Integrated a Data Visualization CMS System, Ensuring Real Time Data Accessibility."
+      "<span class='orange tablisttag'># </span> Engineered automated Python (Pandas, NumPy) data pipelines to process and validate emissions datasets across 35+ California air districts, reducing manual processing time by 60%.",
+      "<span class='orange tablisttag'># </span> Built publication-ready data visualizations and fact-sheet reports for the Carl Moyer Program, directly supporting state incentive policy decisions.",
+      "<span class='orange tablisttag'># </span> Developed and validated numerical simulations using SciPy to model anomaly-detection thresholds, improving alert precision by 31%."
     ]
   },
   "3BX": {
-    jobTitle: "Full Stack Developer Intern @" ,
+    jobTitle: "Software Development Engineer Intern @" ,
     duration: "AUG 2024 - APRIL 2025",
     desc: [
-      "<span class='orange tablisttag'># </span> Developed and Launched Version 1 of 3BX a Multi-User Subscription Based App.",
-      "<span class='orange tablisttag'># </span> Integrated Payment API’s for Secure and Seamless Transactions Resulting in 90% Less Errors.",
-      "<span class='orange tablisttag'># </span> Implemented Lambda and S3 for Faster Response times and Scalability for 200% More Users."
+      "<span class='orange tablisttag'># </span> Shipped a user-facing dashboard generator, releasing feature flags and A/B tests on a weekly cadence.",
+      "<span class='orange tablisttag'># </span> Applied SDLC & AI principles while writing technical documentation to improve written and verbal team communication.",
+      "<span class='orange tablisttag'># </span> Wrote 200+ Pytest cases with a pipeline that fails below 90% coverage, achieving zero regressions across 3 releases."
     ]
   },
-  // "Frontend Tutor": {
-  //   jobTitle: "Founder of" ,
-  //   duration: "MAY 2023 - PRESENT",
-  //   desc: [
-  //     "<span class='orange tablisttag'># </span> Established an Educational Platform Focused on Teaching Individuals Frontend Development.",
-  //     "<span class='orange tablisttag'># </span> Managed a Team of 3 Employees, including UX/UI designers, Developer, and Marketing Expert.",
-  //     "<span class='orange tablisttag'># </span> Enforced Strict Adherence to Deadlines, Organized Critical Meetings, and Delegated Tasks among Team Members."
-  //   ]
-  // },
-    "Coding Dojo": {
-      jobTitle: "Software Development Student @" ,
-      duration: "AUG 2022 - January 2023",
+  "Pineville Initiative": {
+    jobTitle: "Backend Software Development Intern @" ,
+    duration: "JAN 2024 - APRIL 2024",
+    desc: [
+      "<span class='orange tablisttag'># </span> Introduced a Redis cache layer, cutting database load and saving $400/month in RDS costs.",
+      "<span class='orange tablisttag'># </span> Delivered a CMS data-visualization module in Java serving 50k daily API calls.",
+      "<span class='orange tablisttag'># </span> Wrote unit tests with a pipeline passing >95%, ensuring robust, reliable releases."
+    ]
+  },
+    "CSU Sacramento": {
+      jobTitle: "B.S. Computer Science @",
+      duration: "AUG 2025 - MAY 2027",
       desc: [
-        "<span class='orange tablisttag'># </span> Participated in collaborative projects with students from across the country to gain hands-on experience in software development.",
-        "<span class='orange tablisttag'># </span> Engaged in hands-on coding activities and worked on real-world projects to gain practical experience.",
-        "<span class='orange tablisttag'># </span> Enhanced knowledge of distributed computing, storage, and indexing systems by working alongside experienced software engineers."
+        "<span class='orange tablisttag'># </span> Coursework: Data Structures, Algorithms, Object-Oriented Design, and Computer Engineering.",
+        "<span class='orange tablisttag'># </span> Collaborating with peers to design and build multiple team software projects.",
+        "<span class='orange tablisttag'># </span> Expected to graduate with a Bachelor's degree in May 2027."
       ]
     },
     "Sierra College": {
-      jobTitle: "Computer Science Student @",
-      duration: "August 2022 - May 2025",
+      jobTitle: "A.S. Computer & Natural Sciences @",
+      duration: "AUG 2022 - MAY 2025",
       desc: [
-        "<span class='orange tablisttag'># </span> Learning about different Data Structures, Algorithms, and Web development technologies",
-        "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple projects.",
-        "<span class='orange tablisttag'># </span> Current GPA of 3.7 and expected to graduate with a associates degree in May 2025 ."
+        "<span class='orange tablisttag'># </span> Coursework: Data Science, Programming, Data Engineering, and Network Development.",
+        "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple full-stack projects.",
+        "<span class='orange tablisttag'># </span> Graduated with an Associate of Science degree in May 2025."
       ]
     },
-    "CSU Sacramento": {
-      jobTitle: "Computer Science Student @",
-      duration: "August 2025 - May 2027",
+    "Coding Dojo": {
+      jobTitle: "Software Development Bootcamp @" ,
+      duration: "MARCH 2023",
       desc: [
-        "<span class='orange tablisttag'># </span> Learning about Project managment, Data Structures, Algorithms.",
-        "<span class='orange tablisttag'># </span> Collaborated with other students to build multiple projects.",
-        "<span class='orange tablisttag'># </span> Current GPA of 3.1 and expected to graduate with a bachelors degree in Dec 2027 ."
+        "<span class='orange tablisttag'># </span> Completed an intensive bootcamp covering the MERN stack, Python, Java, and design patterns.",
+        "<span class='orange tablisttag'># </span> Earned certification in all stacks with a perfect score of 100/100.",
+        "<span class='orange tablisttag'># </span> Built real-world full-stack projects alongside students from across the country."
       ]
     }
   };
